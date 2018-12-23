@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion this.rootProject.SDK_COMPILE_VERSION
+    buildToolsVersion this.rootProject.BUILD_TOOLS_VERSION
+    defaultConfig {
+        applicationId "com.fanql.androidpermeesionlib"
+        minSdkVersion this.rootProject.MIN_SDK_VERSION
+        targetSdkVersion this.rootProject.TARGET_SDK_VERSION
+        versionCode this.rootProject.VERSION_CODE
+        versionName this.rootProject.VERSION_NAME
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.android.support:appcompat-v7:${SUPPORT_VERSION}"
+    implementation "com.android.support.constraint:constraint-layout:${CONSTRANIT_LAYOUT_VERSION}"
+    testImplementation "junit:junit:${JUNI_VERSION}"
+    androidTestImplementation "com.android.support.test:runner:${TEST_RUNNER}"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:${ESPRESSO_VERSION}"
+}
