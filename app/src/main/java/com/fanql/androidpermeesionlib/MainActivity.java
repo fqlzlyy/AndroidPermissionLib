@@ -23,7 +23,7 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
 
-                requesDynamictPermission(CALL_PHONE, new String[]{Manifest.permission.CALL_PHONE}, new DynamicPermissionListener() {
+                requestDynamictPermission(CALL_PHONE, new String[]{Manifest.permission.CALL_PHONE}, new DynamicPermissionListener() {
 
                     @Override
                     public void onSuccess() {
@@ -47,7 +47,7 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
 
-                requesDynamictPermission(ACCESS_SDCARD, new String[]{permission.WRITE_EXTERNAL_STORAGE}, new DynamicPermissionListener() {
+                requestDynamictPermission(ACCESS_SDCARD, new String[]{permission.WRITE_EXTERNAL_STORAGE}, new DynamicPermissionListener() {
 
                     @Override
                     public void onSuccess() {

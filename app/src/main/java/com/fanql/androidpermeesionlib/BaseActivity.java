@@ -21,7 +21,7 @@ public class BaseActivity extends AppCompatActivity {
         mListenerArray = new SparseArray<>();
     }
 
-    public void requesDynamictPermission(Integer requestCode, String[] permissions, DynamicPermissionListener permissionListener) {
+    public void requestDynamictPermission(Integer requestCode, String[] permissions, DynamicPermissionListener permissionListener) {
 
         if (mListenerArray.indexOfKey(requestCode) == -1) {
             mListenerArray.put(requestCode, permissionListener);
@@ -72,10 +72,8 @@ public class BaseActivity extends AppCompatActivity {
 
 }
 
+// 权限获取监听
 interface DynamicPermissionListener {
-
     void onSuccess();
-
     void onFailure();
-
 }
