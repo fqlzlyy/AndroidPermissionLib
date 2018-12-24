@@ -21,7 +21,7 @@ public class BaseActivity extends AppCompatActivity {
         mListenerArray = new SparseArray<>();
     }
 
-    public void requestDynamictPermission(Integer requestCode, String[] permissions, DynamicPermissionListener permissionListener) {
+    public void requestDynamicPermission(Integer requestCode, String[] permissions, DynamicPermissionListener permissionListener) {
 
         if (mListenerArray.indexOfKey(requestCode) == -1) {
             mListenerArray.put(requestCode, permissionListener);
