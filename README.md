@@ -4,14 +4,14 @@
 
    (1) 将需要申请权限的 Activity 继承 BaseActivity
    
-   (2) 在 Activity 中直接调用 requesDynamictPermission() 方法进行获取权限，注意传入获取权限后的监听
+   (2) 在 Activity 中直接调用 requestDynamicPermission() 方法进行获取权限，注意传入获取权限后的监听
    
         // 打电话权限申请
         findViewById(R.id.btn_call_phone).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                requesDynamictPermission(CALL_PHONE, new String[]{Manifest.permission.CALL_PHONE}, new DynamicPermissionListener() {
+                requestDynamicPermission(CALL_PHONE, new String[]{Manifest.permission.CALL_PHONE}, new DynamicPermissionListener() {
 
                     @Override
                     public void onSuccess() {
